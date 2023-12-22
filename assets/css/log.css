@@ -25,52 +25,35 @@ body{
 
 .container-wrapped{
     display: flex;
+    justify-content: space-between;
 }
 
 
 .container{
-    display: inline-block;
-    margin-right: 1%;
+    margin-right: 5px;
     background-color: #fff;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
-    overflow: hidden;
     width: 434px;
     height: 658px;
-    max-width: 100%;
-    min-height: 480px;
-}
-
-.container p{
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-    margin: 20px 0;
-}
-
-.container span{
-    font-size: 12px;
-}
-
-.container a{
-    color: #333;
-    font-size: 13px;
-    text-decoration: none;
-    margin: 15px 0 10px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container button{
     background-color: #512da8;
     color: #fff;
     font-size: 12px;
-    padding: 10px 45px;
-    width: 100%;
+    padding: 10px 25px;
+    width: 334px;
     border: 1px solid transparent;
     border-radius: 8px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
     align-items: center;
@@ -114,6 +97,12 @@ body{
 
 .container.active .sign-in{
     transform: translateX(100%);
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 

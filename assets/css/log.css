@@ -101,12 +101,16 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    size: 25px;
 }
 
 .container a{
     font-size: 12px;
 }
 
+.contrainer span {
+    font-size: 12px;
+}
 
 
 /*_______  #SIGN UP PAGE  _______*/

@@ -148,14 +148,32 @@ body{
     padding-inline: 15px;
 }
 
-/* 
-    #NAVBAR  */
+/* ------------------
+                    #NAVBAR ---------------- */
 
 .search-container {
     float: left;
     size: 100px;
 }
 
+.dropdown{
+    float: none;
+    display: inline-block;
+    position: relative;
+}
+
+
+.dropdown-content{
+    position: absolute;
+    background-color: var(--white);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px var(--black_30);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
 
 nav {
     background-color: #333;
@@ -273,11 +291,13 @@ body{
 	line-height: 1.5;
 	font-family: 'Poppins', sans-serif;
 }
+
 *{
 	margin:0;
 	padding:0;
 	box-sizing: border-box;
 }
+
 .container{
 	max-width: 1170px;
 	margin:auto;
@@ -286,17 +306,21 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 }
+
 ul{
 	list-style: none;
 }
+
 .footer{
 	background-color: var(--primary);
     padding: 70px 0;
 }
+
 .footer-col{
    width: 25%;
    padding: 0 15px;
 }
+
 .footer-col h4{
 	font-size: 18px;
 	color: #ffffff;
@@ -305,19 +329,22 @@ ul{
 	font-weight: 500;
 	position: relative;
 }
+
 .footer-col h4::before{
 	content: '';
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #e91e63;
+	background-color: var(--light-blue);
 	height: 2px;
 	box-sizing: border-box;
 	width: 50px;
 }
+
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
 }
+
 .footer-col ul li a{
 	font-size: 16px;
 	text-transform: capitalize;
@@ -328,10 +355,12 @@ ul{
 	display: block;
 	transition: all 0.3s ease;
 }
+
 .footer-col ul li a:hover{
 	color: #ffffff;
 	padding-left: 8px;
 }
+
 .footer-col .social-links a{
 	display: inline-block;
 	height: 40px;
@@ -344,6 +373,7 @@ ul{
 	color: #ffffff;
 	transition: all 0.5s ease;
 }
+
 .footer-col .social-links a:hover{
 	color: #24262b;
 	background-color: #ffffff;

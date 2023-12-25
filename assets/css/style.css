@@ -22,6 +22,13 @@
     --black_30: hsla(0, 0%, 0%, 0.3);
     --kappel: hsl(170, 75%, 41%);
     --white: hsl(0, 0%, 100%);
+    
+    /* Main Colors */
+    
+    --primary: #06283D;
+    --secondary: #256D85;
+    --light-blue: #47B5FF;
+    --cloudy-blue: #DFF6FF;
 
     /*gradient colors*/
     --gradient: linear-gradient(-90deg,hsl(151, 58%, 46%) 0%,hsl(170, 75%, 41%) 100%);
@@ -364,7 +371,5 @@ ul{
 
 .copyright{
     font-size: 14px;
+    color : var(--gray-web);
 }
-
-
-

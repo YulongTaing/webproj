@@ -45,3 +45,11 @@ const activeElement = function() {
 }
 
 addEventOnElement(window, "scroll", activeElement);
+
+function ToLoginPage() {
+    window.location.href = "login.html";
+}
+
+function ToSignupPage() {
+    window.location.href = "signup.html";
+}

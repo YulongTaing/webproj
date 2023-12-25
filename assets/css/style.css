@@ -297,7 +297,7 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #24262b;
+	background-color: var(--primary);
     padding: 70px 0;
 }
 .footer-col{
@@ -371,5 +371,5 @@ ul{
 
 .copyright{
     font-size: 14px;
-    color : var(--gray-web);
+    color : var(--secondary);
 }

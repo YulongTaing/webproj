@@ -12,21 +12,11 @@
     <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
     rel="stylesheet">
+    <link href = "assets/scss/_global.scss" rel = "stylesheet">
 </head>
     <body>
         <!-----#NAVBAR----->
-            <div id="content-container" >
-                <div  nameid="MAIN"  id="_bg__main"  ></div>
-                <div  nameid="Rectangle 19"  id="rectangle_19"  ></div>
-                <div  nameid="Open Edu"  id="open_edu" >
-                    Open Edu
-                </div>
-                <div class="search-container">
-                    <form action="#">
-                        <input type="text" placeholder="Search...">
-                        <button type="submit"></button>
-                    </form>
-                </div>
+        <div id="content-container" >
                 <div class="dropdown" id = "courses">
                     <button class="dropbtn">Courses</button>
                     <div class="dropdown-content">
@@ -36,20 +26,22 @@
                         <a href="#">Course 4</a>
                     </div>
                 </div>
-    
+
+                <form class="searchItems" action="action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                
+                <div  nameid="Open Edu"  id="open_edu" >
+                    Open Edu
+                </div>
+                
                 <div id="search_2_line"  nameid="search_2_line"  >
-                    <div  nameid="search_2_line"  id="_bg__search_2_line_ek1"  ></div>
-    
-                    <div id="group_ek2"  nameid="Group"  >
-                        <div  nameid="Group"  id="_bg__group_ek3"  ></div>
-                        <img src="assets/images/vector_ek1.png"  nameid="Vector"  id="vector_ek2" />
-                        <img src="assets/images/vector_ek3.png"  nameid="Vector"  id="vector_ek3" />
-                    </div>
+                    <div  nameid="search_2_line"  id="_bg__search_2_line_ek1" ></div>
     
                 </div>
-                <button type="button" class="btn" id="btn">Sign Up</button>
                 <button type = "button" class = "btn" id = "btn2">Login</button>
-    
+                <button type="button" class="btn" id="btn">Sign Up</button>
             </div>
 
         <!-----#HEADER----->
@@ -70,6 +62,12 @@
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         -->
+
+
+
+        <!-----#BACK TO TOPR----->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
 
 
         <!------#FOOTER----->

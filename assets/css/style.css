@@ -185,7 +185,7 @@ body{
 
 #content-container{
     display: flex;
-    align-items: space-between;
+    gap: 40px;
 }
 
 .searchItems{
@@ -201,7 +201,7 @@ body{
 	font-weight: bold;
 	line-height: 69px;
 	color:#00327D;
-;
+    margin-left: 160px;
 }
 
 .search-container {
@@ -237,10 +237,7 @@ body{
 }
 
 .btn {
-    top : 0px;
-    left : 954px;
-    width : 195.3px;
-    height : 69.3px;
+    padding-left: 100px;
     overflow: hidden;
     font-family: Open Sans;
     font-size: 23px;

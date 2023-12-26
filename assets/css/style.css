@@ -29,6 +29,14 @@
     --secondary: #256D85;
     --light-blue: #47B5FF;
     --cloudy-blue: #DFF6FF;
+    --cambridge-blue: #9EC5AB;
+
+
+
+    --test-color: #48E5C2;
+    --mint-green: #D2F1E4;
+    --nyanza: #DDFBD2;
+    --celadon: #B9E3C6;
 
     /*gradient colors*/
     --gradient: linear-gradient(-90deg,hsl(151, 58%, 46%) 0%,hsl(170, 75%, 41%) 100%);
@@ -189,6 +197,14 @@ body{
     display: inline-block;
     position: relative;
 }
+.drpodown a {
+    float: none;
+    display: block;
+    text-align: left;
+    font-size: 11px;
+}
+
+
 
 #courses {
 	top: -2px;

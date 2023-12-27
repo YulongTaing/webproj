@@ -7,9 +7,8 @@
 /*a lil transition testing*/
 
 body {
-    font-family: var(--creote-family-two);
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    color: var(--text-color-dark);
     font-weight: 400;
     background: #ffffff;
     width: 100%;
@@ -200,11 +199,12 @@ body{
 	font-size: 40px;
 	font-weight: bold;
 	line-height: 69px;
-	color:#00327D;
+	color: var(--primary);
     margin-left: 160px;
 }
 
 .search-container {
+    float: left;
     width: 200px;
     height: 40px;
     background:rgba(230.56,230.56,230.56,1);
@@ -244,7 +244,11 @@ body{
     font-weight : bold;
     line-height : 64.3px;
     text-align: center;
-    color : var(--secondary);
+    color : var(--black_80);
+}
+
+.btn:hover{
+    color: var(--light-blue);
 }
 
 
@@ -504,3 +508,4 @@ ul{
     font-size: 14px;
     color : var(--secondary);
 }
+

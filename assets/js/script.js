@@ -46,6 +46,8 @@ const activeElement = function() {
 
 addEventOnElement(window, "scroll", activeElement);
 
+//log and sign up functions 
+
 function ToLoginPage() {
     window.location.href = "login.html";
 }

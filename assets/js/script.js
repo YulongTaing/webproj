@@ -31,6 +31,12 @@ const closeNavbar = function() {
 
 addEventOnElement(navLinks, "click", closeNavbar);
 
+/* slider */
+$('.carousel').carousel({
+    interval: 2000
+  })
+/* end of slider */
+
 /* header on 100px*/
 
 const header = document.querySelector("[data-header]");

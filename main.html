@@ -1,194 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name = "viewpoint" content = "width = device-width, initial-scale = 1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OpenEdu</title>
-    <meta name="title" content="OpenEdu is a free and open source platform for online learning.">
-    <meta name="description" content="OpenEdu is a free and open source platform for online learning.">
-    <link rel = "shortcut icon" href = "assets/images/favicon.png" type = "image/x-icon">
-    <link rel = "stylesheet" href = "assets/css/style.css">
-    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
-    rel="stylesheet">
-    <link href = "assets/scss/_global.scss" rel = "stylesheet">
-</head>
-    <body>
-        <!-----#NAVBAR----->
-        <div id="content-container" >
-                <button href = "course_menu.html"  target = "_self" class="btn">Courses</button>
+    <meta
+      name="title"
+      content="OpenEdu is a free and open source platform for online learning."
+    />
+    <meta
+      name="description"
+      content="OpenEdu is a free and open source platform for online learning."
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-                <form class="searchItems" action="action_page.php">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-                
-                <div  nameid="Open Edu"  id="open_edu" >
-                    Open Edu
-                </div>
-                
-                <div id="search_2_line"  nameid="search_2_line"  >
-                    <div  nameid="search_2_line"  id="_bg__search_2_line_ek1" ></div>
-                    
-                </div>
-                    <button href = "login.html"  target = "_self" class="btn">Login</button>
-                    <button href = "signup.html" target = "_self" class="btn">Sign Up</button>
+  <body class="flex flex-col min-h-screen font-sans bg-gray-100 text-gray-800 ">
+    <header class="bg-blue-800 text-white py-4 sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/main.html" class="inline-block"
+          ><img src="./assets/images/logo.svg" alt="OpenEdu Logo" class="h-12"
+        /></a>
 
-            </div>
+        <nav class="flex items-center">
+          <ul class="flex flex-row gap-6 text-base">
+            <li>
+              <a class="hover:text-blue-500 transition duration-300" href="#"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-blue-500 transition duration-300" href="#"
+                >Courses</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-blue-500 transition duration-300" href="#"
+                >About</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-blue-500 transition duration-300" href="#"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-blue-500 transition duration-300" href="#"
+                >Login</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-blue-500 transition duration-300" href="#"
+                >Sign up</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <!-----#HEADER----->
+    <!-- Hero Section -->
+    <section
+      class="flex sm:flex-row flex-col bg-gradient-to-r from-blue-700 via-blue-500 to-blue-300 text-white text-center py-20 h-screen items-center relative"
+    >
+      <div class="w-full md:w-1/2 px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          Empower Your Learning Journey with OpenEdu
+        </h1>
+        <p class="text-lg md:text-xl mb-8">
+          Unlock a world of knowledge with our free and open online learning
+          platform.
+        </p>
+        <a
+          href="#"
+          class="w-1/2 mx-auto bg-white text-blue-500 py-2 px-6 rounded-full hover:bg-blue-500 hover:text-white transition duration-300"
+        >
+          Get Started
+        </a>
+      </div>
+      <div class="w-full md:w-1/2 px-4">
+        <img
+          src="./assets/images/hero-image-removebg-preview.png"
+          alt="Hero Image"
+          class="mx-auto rounded-md shadow-lg"
+        />
+      </div>
+    </section>
 
-        <div>
-            
+    <!-- Featured Courses -->
+    <section class="container mx-auto mt-10 text-base">
+      <h2 class="text-4xl font-bold mb-8 text-center">Featured Courses</h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center"
+      >
+        <!-- Course Card (Repeat for each course) -->
+        <div
+          class="bg-white p-6 rounded-md shadow-md transition-transform transform hover:shadow-lg hover:scale-105 duration-300"
+        >
+          <i class="fa-solid fa-code-pull-request"></i>
+
+          <h3 class="text-2xl font-semibold mb-4">Course Title 1</h3>
+          <p class="text-gray-600 mb-6">
+            Brief description of the course. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+          </p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More</a>
         </div>
-        <!---Sliders--->
-        <section class="slider style_four nav_position_one">
-            <div class="owl-carousel owl_nav_block owl_dots_none theme_carousel owl-theme"
-               data-options='{"loop": true, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 7000, "smartSpeed": 1800, "responsive":{ "0" :{ "items": "1" }, "768" :{ "items" : "1" } , "1000":{ "items" : "1" }}}'>
+        <div
+          class="bg-white p-6 rounded-md shadow-md transition-transform transform hover:shadow-lg hover:scale-105 duration-300"
+        >
+          <i class="fa-solid fa-code-commit"></i>
 
-               <div class="slide-item-content">
-                  <div class="slide-item content_left">
-                     <div class="image-layer" style="background-image:url(assets/images/sliders/slider-1-1.jpg)">
-                     </div>
-                     <div class="auto-container">
-                        <div class="row">
-                           <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                              <div class="slider_content pd_top_180 pd_bottom_200">
-                                 <h6 class="animate_up d-inline-block"> Our Vision to Grow Better </h6>
-                                 <h1 class="animate_left"> Inspired <br> Performance </h1>
-                                 <p class="description animate_right"> Duty obligations of business it will
-                                    frequently occur that pleasures <br> have to be repudiated and annoyances
-                                    accepted. </p>
-                                 <div class="button_all animate_down">
-                                    <a href="#" target="_blank" rel="nofollow" class="theme-btn one  animated">Read
-                                       More</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="slide-item-content">
-                  <div class="slide-item content_center">
-                     <div class="image-layer" style="background-image:url(assets/images/sliders/slider-1-2.jpg)">
-                     </div>
-                     <div class="auto-container">
-                        <div class="row">
-                           <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                              <div class="slider_content pd_top_180 pd_bottom_200">
-                                 <h6 class="animate_up d-inline-block"> Hire the Best </h6>
-                                 <h1 class="animate_left"> Hire Better, <br> Faster! </h1>
-                                 <p class="description animate_right"> On the other hand, we denounce with
-                                    righteous indignation and <br> dislike men who are so beguiled. </p>
-                                 <div class="button_all animate_down">
-                                    <a href="#" target="_blank" rel="nofollow" class="theme-btn one  animated">Read
-                                       More</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="slide-item-content">
-                  <div class="slide-item content_right">
-                     <div class="image-layer" style="background-image:url(assets/images/sliders/slider-1-3.jpg)">
-                     </div>
-                     <div class="auto-container">
-                        <div class="row">
-                           <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                              <div class="slider_content pd_top_180 pd_bottom_200">
-                                 <h6 class="animate_up d-inline-block"> Our Vision to Grow Better </h6>
-                                 <h1 class="animate_left"> Countless <br> Happy Clients </h1>
-                                 <p class="description animate_right"> These cases are perfectly simple and easy
-                                    to distinguish. In a free <br> hour, when our power of choice is untrammelled.
-                                 </p>
-                                 <a href="#" target=_blank rel=nofollow class="theme-btn one  animated _zoomIn"> Read
-                                    More </a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+          <h3 class="text-2xl font-semibold mb-4">Course Title 2</h3>
+          <p class="text-gray-600 mb-6">
+            Brief description of the course. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+          </p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+        </div>
+        <div
+          class="bg-white p-6 rounded-md shadow-md transition-transform transform hover:shadow-lg hover:scale-105 duration-300"
+        >
+          <i class="fa-solid fa-laptop-code"></i>
+
+          <h3 class="text-2xl font-semibold mb-4">Course Title 3</h3>
+          <p class="text-gray-600 mb-6">
+            Brief description of the course. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+          </p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+        </div>
+        <div
+          class="bg-white p-6 rounded-md shadow-md transition-transform transform hover:shadow-lg hover:scale-105 duration-300"
+        >
+          <i class="fa-regular fa-file-code"></i>
+
+          <h3 class="text-2xl font-semibold mb-4">Course Title 4</h3>
+          <p class="text-gray-600 mb-6">
+            Brief description of the course. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+          </p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+        </div>
+        <div
+          class="bg-white p-6 rounded-md shadow-md transition-transform transform hover:shadow-lg hover:scale-105 duration-300"
+        >
+          <i class="fa-regular fa-file-code"></i>
+
+          <h3 class="text-2xl font-semibold mb-4">Course Title 5</h3>
+          <p class="text-gray-600 mb-6">
+            Brief description of the course. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+          </p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+        </div>
+        <!-- Repeat for other courses -->
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+  <!-- Container for demo purpose -->
+<div class="container my-24 mx-auto md:px-6">
+  <section class="mb-32 text-center text-base">
+    <h1 class="mb-12 text-3xl font-bold">Testimonials</h1>
+
+    <div class="grid gap-x-6 md:grid-cols-3 lg:gap-x-12">
+      <div class="mb-12 md:mb-0">
+        <div class="mb-6 flex justify-center">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).jpg"
+            class="w-32 rounded-full shadow-lg dark:shadow-black/20" />
+        </div>
+        <h5 class="mb-2 text-lg font-bold">Maria Smantha</h5>
+        <h6 class="mb-4 font-medium text-primary dark:text-primary-400">
+          Web Developer
+        </h6>
+        <p class="mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos
+          id officiis hic tenetur quae quaerat ad velit ab hic.
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="inline-block w-6">
+            <path fill="currentColor"
+              d="M580 556h160V396H580v160Zm-360 0h160V396H220v160Zm406 220 80-160H520V336h280v288l-76 152h-98Zm-360 0 80-160H160V336h280v288l-76 152h-98Zm34-300Zm360 0Z" />
+          </svg>
+        </p>
+        <ul class="mb-0 flex justify-center">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m480 757 157 95-42-178 138-120-182-16-71-168v387ZM233 976l65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+      <div class="mb-12 md:mb-0">
+        <div class="mb-6 flex justify-center">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).jpg"
+            class="w-32 rounded-full shadow-lg dark:shadow-black/20" />
+        </div>
+        <h5 class="mb-2 text-lg font-bold">Lisa Cudrow</h5>
+        <h6 class="mb-4 font-medium text-primary dark:text-primary-400">
+          Graphic Designer
+        </h6>
+        <p class="mb-4">
+          Ut enim ad minima veniam, quis nostrum exercitationem ullam
+          corporis suscipit laboriosam, nisi ut aliquid commodi.
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="inline-block w-6">
+            <path fill="currentColor"
+              d="M580 556h160V396H580v160Zm-360 0h160V396H220v160Zm406 220 80-160H520V336h280v288l-76 152h-98Zm-360 0 80-160H160V336h280v288l-76 152h-98Zm34-300Zm360 0Z" />
+          </svg>
+        </p>
+        <ul class="mb-0 flex justify-center">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+      <div class="mb-0">
+        <div class="mb-6 flex justify-center">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
+            class="w-32 rounded-full shadow-lg dark:shadow-black/20" />
+        </div>
+        <h5 class="mb-2 text-lg font-bold">John Smith</h5>
+        <h6 class="mb-4 font-medium text-primary dark:text-primary-400">
+          Marketing Specialist
+        </h6>
+        <p class="mb-4">
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui
+          blanditiis praesentium voluptatum deleniti atque corrupti.
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="inline-block w-6">
+            <path fill="currentColor"
+              d="M580 556h160V396H580v160Zm-360 0h160V396H220v160Zm406 220 80-160H520V336h280v288l-76 152h-98Zm-360 0 80-160H160V336h280v288l-76 152h-98Zm34-300Zm360 0Z" />
+          </svg>
+        </p>
+        <ul class="mb-0 flex justify-center">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+              <path fill="currentColor"
+                d="m323 851 157-94 157 95-42-178 138-120-182-16-71-168-71 167-182 16 138 120-42 178Zm-90 125 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-355Z" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- Container for demo purpose -->
+
+    <!-- Contact Section -->
+    <section class="bg-gray-900 text-white py-16 ">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+        <p class="text-lg text-gray-600 mb-8">
+          Have questions or need assistance? Contact our support team.
+        </p>
+        <a
+        href="#"
+        class="inline-block bg-white text-blue-500 text-sm py-2 px-10 rounded-full hover:bg-blue-500 hover:text-white transition duration-300"
+      >
+        Contact Us
+      </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-sm">
+      <div class="container mx-auto py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Footer Column 1 -->
+          <div class="mb-8">
+            <h4 class="text-xl font-bold mb-4">OpenEdu</h4>
+            <ul class="text-gray-500">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Footer Column 2 -->
+          <div class="mb-8">
+            <h4 class="text-xl font-bold mb-4">Get Help</h4>
+            <ul class="text-gray-500">
+              <li><a href="#">Ask Our Team</a></li>
+              <li><a href="#">Learner</a></li>
+              <li><a href="#">Teachers</a></li>
+              <li><a href="#">Commonly Asked Questions</a></li>
+            </ul>
+          </div>
+
+          <!-- Footer Column 3 -->
+          <div class="mb-8">
+            <h4 class="text-xl font-bold mb-4">Courses</h4>
+            <ul class="text-gray-500">
+              <li><a href="#">Computer Programming</a></li>
+              <li><a href="#">Khmer History</a></li>
+              <!-- Add more courses -->
+            </ul>
+          </div>
+
+          <!-- Footer Column 4 -->
+          <div>
+            <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-500 hover:text-blue-500"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-500 hover:text-blue-500"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-gray-500 hover:text-blue-500"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-500 hover:text-blue-500"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
-        </section>
-            <!---End Sliders--->
-
-        
-        
-        <!-----#BACK TO TOP----->
-        <!----
-        <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
-            <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-        </a>        
-
-        <script src = "assets/js/script.js" defer></script>
-
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        -->
-
-
-
-        <!-----#BACK TO TOPR----->
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
-
-
-        <!------#FOOTER----->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-row">
-                    <div class="footer-col">
-                        <h4>OpenEdu</h4>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">our services</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">privacy policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>get help</h4>
-                        <ul>
-                            <li><a href="#">Ask our team</a></li>
-                            <li><a href="#">learner</a></li>
-                            <li><a href="#">teachers</a></li>
-                            <li><a href="#">commonly asked questions</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Courses</h4>
-                        <ul>
-                            <li><a href="#">Computer Programming</a></li>
-                            <li><a href="#">Khmer History</a></li>
-                            <li><a href="#">Highschool Course : Mathematics</a></li>
-                            <li><a href="#">Highschool Course : Physics</a></li>
-                            <li><a href="#">Highschool Course : Biology</a></li>
-                            <li><a href="#">Highschool Course : EarthScience</a></li>
-                            <li><a href="#">Soft Skills</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>follow us</h4>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class = "footer-col">
-                        <div class = "contrainer">
-                            <p class = "copyright">
-                                &copy; 2021 OpenEdu. All rights reserved.
-                            </p>
-                        </div>
-                    </div>
-            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-700 py-4">
+        <div class="container mx-auto text-center">
+          <p class="text-gray-500">&copy; 2023 OpenEdu. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
-    </body>
+
+    <script src="assets/js/script.js" defer></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/d1b0dcddf8.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

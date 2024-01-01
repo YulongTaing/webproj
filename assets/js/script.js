@@ -45,31 +45,26 @@ const activeElement = function() {
 }
 
 //slider
-document.addEventListener("DOMContentLoaded", function() {
-    const slider = document.querySelector('.slider');
+document.addEventListener('DOMContentLoaded', function () {
+    const wrapper = document.querySelector('.slider-wrapper');
     let currentIndex = 0;
 
+    function updateSlider() {
+        const itemWidth = document.querySelector('.slider-item').offsetWidth;
+        wrapper.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+    }
+
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % slider.children.length;
+        currentIndex = (currentIndex + 1) % 3;
         updateSlider();
     }
 
-    function updateSlider() {
-        const translateValue = -currentIndex * 100 + '%';
-        slider.style.transform = 'translateX(' + translateValue + ')';
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + 3) % 3;
+        updateSlider();
     }
 
-    const interval = setInterval(nextSlide, 3000); // Change slide every 3 seconds (adjust as needed)
-
-    // Stop the automatic sliding when the user hovers over the slider
-    slider.addEventListener('mouseenter', function() {
-        clearInterval(interval);
-    });
-
-    // Resume automatic sliding when the user leaves the slider
-    slider.addEventListener('mouseleave', function() {
-        interval = setInterval(nextSlide, 3000); // Change slide every 3 seconds (adjust as needed)
-    });
+    setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
 });
 
 

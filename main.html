@@ -29,6 +29,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     
+<!------nav bar ----->
 
   <body class="flex flex-col min-h-screen font-sans bg-gray-100 text-gray-800 ">
     <header>
@@ -83,24 +84,88 @@
 
 
     <!-- Slider -->
-    <section class="slider">
-      <input type = "radio" name = "slider" id = "s1">
-      <input type = "radio" name = "slider" id = "s2">
-      <input type = "radio" name = "slider" id = "s3">
-      <input type = "radio" name = "slider" id = "s4">
-      <label for = "s1" id = "slide1">
-        <img src = "assets/images/cat2.jpg" alt = "" height = "100%" width = "100%">
-      </label>
-      <label for = "s2" id = "slide2">
-        <img src = "assets/images/cat2.jpg" alt = "" height = "100%" width = "100%">
-      </label>
-      <label for = "s3" id = "slide3">
-        <img src = "assets/images/cat2.jpg" alt = "" height = "100%" width = "100%">
-      </label>
-      <label for = "s4" id = "slide4">
-        <img src = "assets/images/cat2.jpg" alt = "" height = "100%" width = "100%">
-      </label>
-    </section>
+    <style>
+      /* Additional styles for the slider */
+      .slider-container {
+          overflow: hidden;
+      }
+
+      .slider-wrapper {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+      }
+
+      .slider-item {
+          min-width: 100%;
+          box-sizing: border-box;
+      }
+  </style>
+  <title>Responsive Slider</title>
+</head>
+<body class="bg-gray-200">
+  <section class="container mx-auto mt-10 text-base">
+      <h2 class="text-4xl font-bold mb-8 text-center">Our Missions</h2>
+      
+      <!-- Responsive Slider -->
+      <div class="slider-container">
+        <div class="slider-wrapper">
+            <!-- Slide 1 -->
+            <div class="slider-item bg-white p-6 rounded-md shadow-md transition-transform transform hover:shadow-lg hover:scale-105 duration-300">
+                <img src="assets/images/cat2.jpg" alt="Course 1">
+                <h3 class="text-2xl font-semibold mb-4">Computer Fundamental</h3>
+                <p class="text-gray-600 mb-6">
+                    Brief description of the course. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slider-item bg-white p-6 rounded-md shadow-md transition-transform transform hover:shadow-lg hover:scale-105 duration-300">
+                <img src="assets/images/duck1.jpg" alt="Course 2">
+                <h3 class="text-2xl font-semibold mb-4">Network Engineering</h3>
+                <p class="text-gray-600 mb-6">
+                    Brief description of the course. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slider-item bg-white p-6 rounded-md shadow-md transition-transform transform hover:shadow-lg hover:scale-105 duration-300">
+                <img src="assets/images/monkey1.jpg" alt="Course 3">
+                <h3 class="text-2xl font-semibold mb-4">Operating System</h3>
+                <p class="text-gray-600 mb-6">
+                    Brief description of the course. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <script>
+      // JavaScript for slider functionality
+      document.addEventListener('DOMContentLoaded', function () {
+          const wrapper = document.querySelector('.slider-wrapper');
+          let currentIndex = 0;
+
+          function updateSlider() {
+              const itemWidth = document.querySelector('.slider-item').offsetWidth;
+              wrapper.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+          }
+
+          function nextSlide() {
+              currentIndex = (currentIndex + 1) % 3;
+              updateSlider();
+          }
+
+          function prevSlide() {
+              currentIndex = (currentIndex - 1 + 3) % 3;
+              updateSlider();
+          }
+
+          setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
+      });
+  </script>
     
 
 

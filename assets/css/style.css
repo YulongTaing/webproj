@@ -370,6 +370,85 @@ input[type=text] {
 
 
 
+
+
+
+
+
+/*_______  #SLIDER  _______*/
+.sliders-wrapper{
+    height: 400px;
+    width: 700px;
+}
+
+.sliders-wrapper .img{
+    height : 100%;
+    width: 100%;
+}
+
+.sliders-wrapper .img img{
+    position : absolute;
+    height : 100%;
+    width: 100%;
+    object-fit : cover;
+    clip-path: circle(0% at 0% 100%);
+}
+
+#slide-one:checked ~ .img img-1{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#slide-two:checked ~ .img img-1,
+#slide-two:checked ~ .img img-2{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#slide-three:checked ~ .img img-1,
+#slide-three:checked ~ .img img-2,
+#slide-three:checked ~ .img img-3{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#slide-four:checked ~ .img img-1,
+#slide-four:checked ~ .img img-2,
+#slide-four:checked ~ .img img-3,
+#slide-four:checked ~ .img img-4{
+    clip-path: circle(150% at 0% 100%);
+}
+
+.sliders-wrapper .sliders{
+    position : absolute;
+    bottom : 20px;
+    left : 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    display : flex; 
+}
+
+.sliders-wrapper .sliders label{
+    height : 13px;
+    width : 13px;
+    border : 2px solid var(--light-blue);
+    margin : 0 3px;
+    cursor : pointer;
+    border-radius : 50%;
+    transition: all 0.5s ease;
+}
+
+#slide-one:checked ~ .sliders label{
+    width : 35px;
+    background-color: var(--light-blue);
+}
+
+.sliders label:hover{
+    background-color: #06283D;
+}
+
+.sliders-wrapper input[type="radio"]{
+    display : none;
+}
+
+
 /*back to top button*/
 #myBtn {
     display: none;

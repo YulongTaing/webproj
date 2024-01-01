@@ -44,6 +44,36 @@ const activeElement = function() {
     }
 }
 
+//slider
+document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.querySelector('.slider');
+    let currentIndex = 0;
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slider.children.length;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        const translateValue = -currentIndex * 100 + '%';
+        slider.style.transform = 'translateX(' + translateValue + ')';
+    }
+
+    const interval = setInterval(nextSlide, 3000); // Change slide every 3 seconds (adjust as needed)
+
+    // Stop the automatic sliding when the user hovers over the slider
+    slider.addEventListener('mouseenter', function() {
+        clearInterval(interval);
+    });
+
+    // Resume automatic sliding when the user leaves the slider
+    slider.addEventListener('mouseleave', function() {
+        interval = setInterval(nextSlide, 3000); // Change slide every 3 seconds (adjust as needed)
+    });
+});
+
+
+
 addEventOnElement(window, "scroll", activeElement);
 
 //log and sign up functions 

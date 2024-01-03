@@ -360,49 +360,68 @@ input[type=text] {
 
 
 /*_______  #SLIDER  _______*/
-[type = radio]{
-    display : none;
+.slider-container {
+    max-width: 800px; /* Set a maximum width for the slider */
+    margin: 50px auto; /* Center the slider on the page */
 }
 
-#slider {
-    position : relative;
-    height : 35vw;
-    perspective: 1000px;
-    transform-style: preserve-3d ;
+.slider-wrapper {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    scroll-snap-type: x mandatory;
 }
 
-#slider label {
-    margin : auto;
-    width : 60%;
-    height: 100%;
-    position : absolute;
-    border-radius: 4px;
-    left : 0;
-    right : 0;
-    cursor : pointer;
-    transition: tansform 0.4s ease; 
+.slider-item {
+    min-width: 300px; /* Set a minimum width for each slide */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin-right: 20px; /* Add spacing between slides */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
 }
 
-#s1:checked ~ #slide4, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3 {
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
-    transform : translate3d(30%, 0 , -200px) 
+.slider-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add rounded corners to the images */
+    margin-bottom: 10px;
 }
 
-#s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4 {
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
-    transform : translate3d(0, 0 , 0);
+.slider-item:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
 }
 
-#s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide1 {
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
-    transform : translate3d(30%, 0 , 200px) 
+.slider-container {
+    overflow: hidden;
 }
 
-#s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide1, #s4:checked ~ #slide2 {
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
-    transform : translate3d(30%, 0 , 400px)
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
+.slider-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+h3 {
+    color: #333;
+}
+
+p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 
 
 /*back to top button*/

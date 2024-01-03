@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href = "assets/css/unit.css" rel = "stylesheet" type = "text/css">
+        <link href="assets/css/unit.css" rel="stylesheet" type="text/css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
@@ -10,7 +10,7 @@
     </head>
     <body class="bg-white">    
         <!-- Course Unit side bar -->
-        <div class="flex">
+        <div class="flex flex-col">
         <aside  class = "w-auto overflow-y-auto">
         <div class="flex items-center justify-between px-8 py-5">
             <div class="flex items-center mr-5">
@@ -156,16 +156,34 @@
         <div class="overflow-y-auto h-32 mb-4"></div>
         <!-- End of Course Unit side bar -->
         </aside>
-
-        <!-- Course unit content -->
-        <aside class = "w-auto overflow-y-auto">
-            <div class="unit-container">
-                <div class="container-1">
-
+        <div class="flex flex-row">
+            <aside class="w-auto overflow-y-auto">
+                <div class="w-5/6 aspect-w-6 aspect-h-5 bg-gray-300 mx-auto">
+                    <div class="flex items-center justify-center h-full">
+                        <h1>Unit 1</h1>
+                        <div class="flex items-center justify-center h-full">
+                            <h1>Your Content Goes Here</h1>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </aside>
-        <!-- End of Course unit content -->
+            </aside>
+            <!-- End of First Course unit content -->
+
+            <!-- Second Course unit content -->
+            <aside class="w-5/6 overflow-y-auto">
+                <div class="w-5/6 aspect-w-6 aspect-h-5 bg-gray-300 mx-auto">
+                    <div class="flex items-center justify-center h-full">
+                        <h1>Unit 2</h1>
+                        <div class="flex items-center justify-center h-full">
+                            <h1>Your Content Goes Here</h1>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <!-- End of Second Course unit content -->
+
     </div>
+        <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
     </body>
     <html>
